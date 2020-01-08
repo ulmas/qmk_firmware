@@ -12,12 +12,36 @@ To make use of this file you will need follow the following steps:
 
 More information can be found in the QMK docs: <https://docs.qmk.fm>
 
+## Generate Keymap File
+
+Instead of manually editing the `keymap.c` file (as indiciated [here](https://docs.qmk.fm/#/newbs_building_firmware?id=customize-the-layout-to-your-liking)),
+use the online configurator:
+
+1. Either start from the default layout, or import the JSON mapping file (from `qmk-configurator` folder).
+2. Perform mapping.
+3. Click `Compile` on top right. This will compile the mappings and firmware.
+4. Click `Keymap Only` to download a `.zip` file with the `keymap.c` and other files.
+5. Extract the files to the `ulmas` folder (where this readme is).
+
 ## Build firmware
 
  [Base instructions](https://docs.qmk.fm/#/newbs_building_firmware?id=build-your-firmware)
 
+### Manual Build
+
+Use this manual method to enable the mouse mode. The online configurator does not enable the mouse mode.
+
 * Navigate to root of `qmk_firmware`
 * Run `make keebio/iris/rev2:ulmas`
+
+### Build Using Online Configurator
+
+**IMPORTANT:** _build with the online configurator does not enable the mouse mode._
+
+In the online configurator:
+
+1. Compile
+2. Click `Download Firmware` to download the `.hex` file for flashing
 
 ## Flash firmware
 
