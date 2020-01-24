@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define USE_I2C
 #define EE_HANDS
 
-#undef RGBLED_NUM
+#undef  RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 12
 #define RGBLIGHT_HUE_STEP 8
@@ -33,3 +33,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_TIME_TO_MAX 60
 #define MOUSEKEY_WHEEL_MAX_SPEED 8
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 40
+
+#define TAPPING_TERM 200
