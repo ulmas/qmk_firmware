@@ -29,20 +29,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         BL_BRTG, BL_INC  , _______, _______, _______, KC_LPRN, KC_RPRN, KC_P7  , KC_P8  , KC_P9  , KC_PPLS, KC_EQL ,
         BL_STEP, BL_DEC  , KC_LEFT, KC_RGHT, KC_UP  , KC_LCBR, KC_RCBR, KC_P4  , KC_P5  , KC_P6  , KC_PCMM, _______,
         LT(3, _______), BL_TOGG, _______, _______, KC_DOWN, KC_LBRC, _______, _______, KC_RBRC, KC_P1  , KC_P2  , KC_P3, KC_PEQL, KC_PDOT,
-        _______, KC_TRNS , KC_DEL , KC_BSPC, KC_P0  , KC_PDOT
+        _______, _______ , KC_DEL , KC_BSPC, KC_P0  , KC_PDOT
         ),
 	[2] = LAYOUT(
         KC_F12 , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,
         RESET  , KC_VOLU, _______, _______, _______, KC_PEQL, KC_HOME, KC_PGDN, KC_PGUP, KC_END , _______, _______,
         _______, KC_VOLD, _______, KC_HOME, KC_PGUP, KC_UNDS, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, _______, _______,
         KC_MUTE, _______, _______, KC_END , KC_PGDN, KC_PMNS, _______, _______, KC_PPLS, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, KC_TRNS, _______
+        _______, _______, _______, _______, _______, _______
         ),
 	[3] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_WH_U,
         _______, _______, _______, _______, _______, _______, KC_WH_U, KC_BTN1, KC_MS_U, KC_BTN2, _______, KC_WH_D,
         _______, _______, _______, _______, _______, _______, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______,
-        _______, _______, _______, KC_BTN1, KC_TRNS, _______
+        _______, _______, _______, KC_BTN1, _______, _______
         )
 };
