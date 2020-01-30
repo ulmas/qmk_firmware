@@ -35,3 +35,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 40
 
 #define TAPPING_TERM 200
+#define TAPPING_TOGGLE 2

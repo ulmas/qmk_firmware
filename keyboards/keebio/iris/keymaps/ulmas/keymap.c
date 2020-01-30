@@ -7,8 +7,8 @@
 
 enum {
   TD_SLSH_QUES = 0,
-  TD_SPC_DEL = 1,
-  TD_ENT_BSPC = 2,
+  TD_SPC_DEL   = 1,
+  TD_ENT_BSPC  = 2,
   TD_SCLN_COLN = 3,
   TD_QUOT_DQUO = 4,
 };
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,   _______,          _______,  KC_N,   KC_M,    KC_COMM, KC_DOT,  TD(0),   T_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_LGUI, MO(1),   KC_SPC,                    KC_ENT,  MO(2),   T_LALT
+                                    KC_LGUI, TT(1),   KC_SPC,                    KC_ENT,  TT(2),   T_LALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
