@@ -17,6 +17,8 @@ enum {
   TD_J         = 8,
   TD_B         = 9,
   TD_N         = 10,
+  TD_COMM      = 11,
+  TD_DOT       = 12,
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -31,6 +33,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_J]         = ACTION_TAP_DANCE_DOUBLE(KC_J, KC_RPRN),
   [TD_B]         = ACTION_TAP_DANCE_DOUBLE(KC_B, KC_LBRC),
   [TD_N]         = ACTION_TAP_DANCE_DOUBLE(KC_N, KC_RBRC),
+  [TD_COMM]      = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_LABK),
+  [TD_DOT]       = ACTION_TAP_DANCE_DOUBLE(KC_DOT, KC_RABK),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -43,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      T_LCTL,  KC_A,    KC_S,    KC_D,    TD(7),   TD(5),                              TD(6),   TD(8),   KC_K,    KC_L,    TD(3),   TD(4),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    TD(9),    _______,          _______,TD(10),  KC_M,    KC_COMM, KC_DOT,  TD(0),   T_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    TD(9),    _______,          _______,TD(10),  KC_M,    TD(11),  TD(12),  TD(0),   T_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LGUI, TT(2),   KC_SPC,                    KC_ENT,  TT(1),   T_LALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
