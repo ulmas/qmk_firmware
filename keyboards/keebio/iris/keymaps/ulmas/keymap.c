@@ -6,35 +6,35 @@
 #define LT_3   LT(3, _______)
 
 enum {
-  TD_SLSH_QUES = 0,
-  TD_SPC_DEL   = 1,
-  TD_ENT_BSPC  = 2,
+//   TD_SLSH_QUES = 0,
+//   TD_SPC_DEL   = 1,
+//   TD_ENT_BSPC  = 2,
   TD_SCLN_COLN = 3,
   TD_QUOT_DQUO = 4,
-  TD_G         = 5,
-  TD_H         = 6,
-  TD_F         = 7,
-  TD_J         = 8,
-  TD_B         = 9,
-  TD_N         = 10,
-  TD_COMM      = 11,
-  TD_DOT       = 12,
+//   TD_G         = 5,
+//   TD_H         = 6,
+//   TD_F         = 7,
+//   TD_J         = 8,
+//   TD_B         = 9,
+//   TD_N         = 10,
+//   TD_COMM      = 11,
+//   TD_DOT       = 12,
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_SLSH_QUES] = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, KC_QUES),
-  [TD_SPC_DEL]   = ACTION_TAP_DANCE_DOUBLE(KC_SPC, KC_DEL),
-  [TD_ENT_BSPC]  = ACTION_TAP_DANCE_DOUBLE(KC_ENT, KC_BSPC),
+//   [TD_SLSH_QUES] = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, KC_QUES),
+//   [TD_SPC_DEL]   = ACTION_TAP_DANCE_DOUBLE(KC_SPC, KC_DEL),
+//   [TD_ENT_BSPC]  = ACTION_TAP_DANCE_DOUBLE(KC_ENT, KC_BSPC),
   [TD_SCLN_COLN] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_COLN),
   [TD_QUOT_DQUO] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_DQUO),
-  [TD_G]         = ACTION_TAP_DANCE_DOUBLE(KC_G, KC_LCBR),
-  [TD_H]         = ACTION_TAP_DANCE_DOUBLE(KC_H, KC_RCBR),
-  [TD_F]         = ACTION_TAP_DANCE_DOUBLE(KC_F, KC_LPRN),
-  [TD_J]         = ACTION_TAP_DANCE_DOUBLE(KC_J, KC_RPRN),
-  [TD_B]         = ACTION_TAP_DANCE_DOUBLE(KC_B, KC_LBRC),
-  [TD_N]         = ACTION_TAP_DANCE_DOUBLE(KC_N, KC_RBRC),
-  [TD_COMM]      = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_LABK),
-  [TD_DOT]       = ACTION_TAP_DANCE_DOUBLE(KC_DOT, KC_RABK),
+//   [TD_G]         = ACTION_TAP_DANCE_DOUBLE(KC_G, KC_LCBR),
+//   [TD_H]         = ACTION_TAP_DANCE_DOUBLE(KC_H, KC_RCBR),
+//   [TD_F]         = ACTION_TAP_DANCE_DOUBLE(KC_F, KC_LPRN),
+//   [TD_J]         = ACTION_TAP_DANCE_DOUBLE(KC_J, KC_RPRN),
+//   [TD_B]         = ACTION_TAP_DANCE_DOUBLE(KC_B, KC_LBRC),
+//   [TD_N]         = ACTION_TAP_DANCE_DOUBLE(KC_N, KC_RBRC),
+//   [TD_COMM]      = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_LABK),
+//   [TD_DOT]       = ACTION_TAP_DANCE_DOUBLE(KC_DOT, KC_RABK),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -45,9 +45,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     T_LCTL,  KC_A,    KC_S,    KC_D,    TD(7),   TD(5),                              TD(6),   TD(8),   KC_K,    KC_L,    TD(3),   TD(4),
+     T_LCTL,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    TD(3),   TD(4),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    TD(9),    _______,          _______,TD(10),  KC_M,    TD(11),  TD(12),  TD(0),   KC_BSPC,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,          _______, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSPC,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LGUI, MO(2),   KC_SPC,                    KC_ENT,  MO(1),   T_LALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, BL_DEC,  _______, KC_HOME, KC_PGUP, _______,                            KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, BL_TOGG , _______, KC_END,  KC_PGDN, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+     _______, BL_TOGG ,_______, KC_END,  KC_PGDN, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     _______, _______, _______,                   _______, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -69,13 +69,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     _______, _______, _______, _______, _______, KC_LABK,                            KC_RABK, _______, _______, _______, _______, _______,
+     _______, _______, _______, _______, _______, KC_LABK,                            KC_RABK, _______, _______, _______, _______, KC_PEQL,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     BL_BRTG, KC_VOLU, _______, _______, _______, KC_LPRN,                            KC_RPRN, KC_P7,   KC_P8,   KC_P9,   _______, KC_PPLS,
+     BL_BRTG, KC_VOLU, _______, _______, _______, KC_LBRC,                            KC_RBRC, KC_P7,   KC_P8,   KC_P9,   _______, KC_PPLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     MO(4),   KC_VOLD, KC_LEFT, KC_RGHT, KC_UP,   KC_LCBR,                            KC_RCBR, KC_P4,   KC_P5,   KC_P6,   _______, KC_PAST,
+     MO(4),   KC_VOLD, KC_LEFT, KC_RGHT, KC_UP,   KC_LPRN,                            KC_RPRN, KC_P4,   KC_P5,   KC_P6,   _______, KC_PAST,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     LT_3,    KC_MUTE, _______, _______, KC_DOWN, KC_LBRC, _______,          _______, KC_RBRC, KC_P1,   KC_P2,   KC_P3,   _______, KC_PEQL,
+     LT_3,    KC_MUTE, _______, _______, KC_DOWN, KC_LCBR, _______,          _______, KC_RCBR, KC_P1,   KC_P2,   KC_P3,   _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     _______, _______, _______,                   _______, KC_P0,   KC_PDOT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
